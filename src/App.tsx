@@ -1,11 +1,23 @@
-// import { useState } from "react";
-// import reactLogo from "./assets/react.svg";
-// import viteLogo from "./assets/vite.svg";
-// import heroImg from "./assets/hero.png";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
+// Routes
+import Home from "./pages/Home";
+import Auth from "./pages/Auth";
+import Checkout from "./pages/Checkout";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <div className="app">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/checkout" element={<Checkout />} />
+        </Routes>
+      </div>
+    </>
+  );
 }
 
 export default App;
