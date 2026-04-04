@@ -1,0 +1,36 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+const Navbar = () => {
+  return (
+    <>
+      <div className="navbar">
+        <div className="navbar-container">
+          <Link to="/" className="navbar-logo">
+            ShopHub
+          </Link>
+          <div className="navbar-links">
+            <Link to="/auth" className="navbar-link">
+              Auth
+            </Link>
+            <Link to="/checkout" className="navbar-link">
+              Checkout
+            </Link>
+          </div>
+          <div className="navbar-auth">
+            <div className="navbar-auth-links">
+              <Link to="/auth/sign-in" className="btn btn-primary">
+                Sign in
+              </Link>
+              <Link to="/auth/sign-up" className="btn btn-secondary">
+                Sign up
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Navbar;
